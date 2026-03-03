@@ -1,0 +1,149 @@
+:root {
+    --obsidianblack: #0b0c10;
+    --metalico: #c0c0c0;
+    --coldwhite: #fafafa;
+    --grisescuro: #353535;
+    --greysoft: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c0c0c0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #353535;
+    color: #fafafa;
+    padding: 10px;
+    width: 100vw;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h1 {
+    /*border: 1px dotted white;*/
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.562);
+
+    flex: 0 0 450px;
+}
+
+header > nav {
+    /*border: 1px dotted white;*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+}
+
+nav {
+    display: flex;
+}
+
+header > nav > a {
+    background-color: #c0c0c0;
+    color: #353535;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+header > nav > a:hover {
+    background-color: #fafafa;
+    color: #0b0c10;
+    transition-duration: .5s;
+}
+
+#menu {
+    display: none;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+main {
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #353535ab;
+    width: 90%;
+    max-width: 1200px;
+    height: 700px;
+    margin-top: 5vh;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main > p {
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    max-width: 200px;
+    width: 100%;
+    align-items: center;
+    display: block;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 580px){
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    header > h1 {
+        flex: 0 0 auto;   
+        text-align: center;
+    }
+
+    #menu {
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+
+     nav {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.ativo {
+        display: flex !important;
+    }
+
+    header > nav > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: 150px;
+    }
+}
